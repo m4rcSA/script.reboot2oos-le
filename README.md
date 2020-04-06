@@ -3,6 +3,8 @@ LibreELEC port of script.reboot2oos-oe by teeedubb
 
 **Original author [teeedubb](https://github.com/teeedubb/teeedubb-xbmc-repo)**
 
+**Original forum [[RELEASE] Reboot2oOS - Reboot once to another OS.](https://forum.kodi.tv/showthread.php?tid=172715)**
+ 
 ### Readme
 This addon will reboot your machine once into another OS of your choice then boot back into your default OS. 
 It uses GRUB so a working multi-boot setup with GRUB is required. This addon has been tested with GRUB 2.04. 
