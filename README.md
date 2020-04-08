@@ -53,6 +53,8 @@ Use the output from the list of OS's.
 
 * script.reboot2oos\bin\reboot2oos.sh
 ```
+GRUB_BOOT_DIR="" #Point to the partition holding grub
+ADDON_LOCATION="/storage/.kodi/addons/script.reboot2oos-le" #Point to the location of the addon in LibreELEC
 REBOOT_TO=
 DEFAULT_OS=
 ```
