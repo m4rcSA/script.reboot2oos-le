@@ -19,8 +19,8 @@ echo "Reboot once to: $MENU_ENTRY"
 echo "Addon directory location: $ADDON_LOCATION"
 echo "GRUB boot directory location: $GRUB_BOOT_DIR"
 echo "GRUB config file: $GRUB_CONFIG_FILE"
-echo "grub-set-default command: grub-set-default --boot-directory=$GRUB_BOOT_DIR $GRUB_DEFAULT" $ADDON_LOCATION
-echo "grub-reboot command: grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY" $ADDON_LOCATION
-$ADDON_LOCATION/bin/grub-set-default --boot-directory=$GRUB_BOOT_DIR $GRUB_DEFAULT $ADDON_LOCATION
-$ADDON_LOCATION/bin/grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY $ADDON_LOCATION
+echo "grub-set-default command: grub-set-default --boot-directory=$GRUB_BOOT_DIR $GRUB_DEFAULT"
+echo "grub-reboot command: grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY"
+$ADDON_LOCATION/bin/grub-set-default --boot-directory=$GRUB_BOOT_DIR $GRUB_DEFAULT
+$ADDON_LOCATION/bin/grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY
 reboot
