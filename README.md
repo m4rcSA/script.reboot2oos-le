@@ -96,3 +96,8 @@ Additionally you need following shared libs:
 * libdevmapper.so.1.02.1
 * libpcre.so.3
 * libselinux.so.1
+
+### Optional: Pack it again
+```
+zip -r script.reboot2oos-le.zip script.reboot2oos-le
+```

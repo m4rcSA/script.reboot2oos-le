@@ -17,14 +17,14 @@
 # along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
 
 # Initialize some variables.
-prefix=$1
-exec_prefix=$1
+prefix=/storage/.kodi/addons/script.reboot2oos-le
+exec_prefix=/storage/.kodi/addons/script.reboot2oos-le
 bindir=${exec_prefix}/bin
-sbindir=$1/bin
+sbindir=/storage/.kodi/addons/script.reboot2oos-le/bin
 sysconfdir="${prefix}/etc"
 PACKAGE_NAME=GRUB
 PACKAGE_VERSION=2.04
-datarootdir="$1/share"
+datarootdir="/storage/.kodi/addons/script.reboot2oos-le/share"
 datadir="${datarootdir}"
 if [ "x$pkgdatadir" = x ]; then
     pkgdatadir="${datadir}/grub"
