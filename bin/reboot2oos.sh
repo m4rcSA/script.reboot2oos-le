@@ -5,7 +5,7 @@
 set -e
 
 #####
-GRUB_BOOT_DIR="/var/media/###YOUR DEVICE###/boot/" #Point to the partition holding grub
+GRUB_BOOT_DIR="/var/media/armbi_root/boot/" #Point to the partition holding grub
 ADDON_LOCATION="/storage/.kodi/addons/script.reboot2oos-le" #Point to the location of the addon in LibreELEC if different
 REBOOT_TO="Armbian GNU/Linux" #other os
 DEFAULT_OS="LibreELEC" #libreelec
