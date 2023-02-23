@@ -1,7 +1,7 @@
 ﻿import xbmc, xbmcgui, os, xbmcaddon, stat
 
-dialog1 = ""
-dialog2 = ""
+dialog1 = "Reinicia al Armbian"
+dialog2 = "Kodi es te que reiniciar per accedir al escpritori"
 
 addon = xbmcaddon.Addon()
 script_path = addon.getAddonInfo('path')
@@ -12,5 +12,5 @@ dialog = xbmcgui.Dialog()
 if dialog.yesno(dialog1, dialog2):
   xbmc.executebuiltin("XBMC.PlayerControl(Stop)")
   print(script)
-  os.chmod(script, stat.S_IRWXU)
+#  os.chmod(script, stat.S_IRWXU)
   os.system(script)

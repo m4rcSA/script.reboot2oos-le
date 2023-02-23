@@ -6,6 +6,7 @@ set -e
 
 #####
 GRUB_BOOT_DIR="/var/media/armbi_root/boot/" #Point to the partition holding grub
+GRUB_ENV_FILE=$GRUB_BOOT_DIR"grub/grubenv"
 ADDON_LOCATION="/storage/.kodi/addons/script.reboot2oos-le" #Point to the location of the addon in LibreELEC if different
 REBOOT_TO="Armbian GNU/Linux" #other os
 DEFAULT_OS="LibreELEC" #libreelec
@@ -22,5 +23,6 @@ echo "GRUB config file: $GRUB_CONFIG_FILE"
 echo "grub-set-default command: grub-set-default --boot-directory=$GRUB_BOOT_DIR $GRUB_DEFAULT"
 echo "grub-reboot command: grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY"
 #$ADDON_LOCATION/bin/grub-set-default --boot-directory=$GRUB_BOOT_DIR $GRUB_DEFAULT
-$ADDON_LOCATION/bin/grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY
+#$ADDON_LOCATION/bin/grub-reboot --boot-directory=$GRUB_BOOT_DIR $MENU_ENTRY
+cp $GRUB_ENV_FILE"-armbian" $GRUB_ENV_FILE
 reboot
