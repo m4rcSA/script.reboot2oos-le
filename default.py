@@ -1,6 +1,6 @@
 ﻿import xbmc, xbmcgui, os, xbmcaddon, stat
 
-dialog1 = "Reinicia al Armbian"
+dialog1 = "Reinicia al escriptori"
 dialog2 = "Kodi es te que reiniciar per accedir al escpritori"
 
 addon = xbmcaddon.Addon()
