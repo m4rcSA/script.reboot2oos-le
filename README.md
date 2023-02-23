@@ -1,5 +1,5 @@
 # script.reboot2oos-le
-LibreELEC port of script.reboot2oos-oe by teeedubb 
+LibreELEC port of script.reboot2oos-oe by teeedubb changed to use grubenv file as posted in https://www.kodinerds.net/index.php/Thread/58245-Addon-Reboot2OS-gesucht/
 
 **Original author [teeedubb](https://github.com/teeedubb/teeedubb-xbmc-repo)**
 
@@ -19,16 +19,20 @@ get a list of OS's recognised by GRUB with the following command:
 sed -n '/menuentry/s/.*\(["'\''].*["'\'']\).*/\1/p' /boot/grub/grub.cfg
 ```
 
-Edit the file /etc/default/grub and change the line
+Edit the file /etc/default/grub and change the line to LibreELEC menuenty name that you have in your /boot/grub/custom.cfg
 
 * /etc/default/grub
 ```
 GRUB_DEFAULT=
 to
-GRUB_DEFAULT=saved
+GRUB_DEFAULT=LibreELEC
+```
+Create the grubenv file with the entry of the OS you want to reboot once. The list starts counting at 0.
+```
+sudo grub-editenv /boot/grub/grubenv-armbian set next_entry=0
 ```
 
-Now update GRUB and make the script executable:
+Now update GRUB:
 ```
 update-grub
 ```
@@ -53,10 +57,10 @@ Use the output from the list of OS's.
 
 * script.reboot2oos\bin\reboot2oos.sh
 ```
-GRUB_BOOT_DIR="" #Point to the partition holding grub
+GRUB_BOOT_DIR="/var/media/armbi_root/boot/" #Point to the partition holding grub
 ADDON_LOCATION="/storage/.kodi/addons/script.reboot2oos-le" #Point to the location of the addon in LibreELEC
-REBOOT_TO=
-DEFAULT_OS=
+REBOOT_TO="" #other os
+DEFAULT_OS="LibreELEC"
 ```
 
 The addon icon can be changed based on your needs. 
@@ -64,6 +68,7 @@ The addon icon can be changed based on your needs.
 
 Install the addon, you are good to go.
 
+### Grub and libs not required in the addon. You can delete them.
 
 Optional: The lib folder should be added automaticaly but if not add this to
 * ~/.config/autostart.sh
