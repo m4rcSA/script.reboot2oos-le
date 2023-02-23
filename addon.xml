@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.reboot2oos-le" name="Reinicia al SO" version="0.3.6" provider-name="teeedubb">
+<addon id="script.reboot2oos-le" name="Reinicia al escriptori" version="0.3.6" provider-name="teeedubb">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
